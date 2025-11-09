@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Arksoft Customer Management</title>
+    <link rel="stylesheet" href="~/css/output.css" asp-append-version="true" />
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-white min-h-screen font-body">
+    <header class="navbar sticky top-0 z-40">
+        <nav class="bg-gray-900 border-b border-gray-800 px-4 lg:px-6 py-2.5">
+            <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+                <a asp-area="" asp-controller="Customer" asp-action="Index" class="flex items-center">
+                    <svg class="w-8 h-8 mr-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
+                    <span class="navbar-brand">Arksoft Customer Management</span>
+                </a>
+                
+                <div class="flex items-center lg:order-2">
+                    <div class="hidden lg:flex lg:space-x-4">
+                        <span class="text-sm text-gray-400">
+                            Enterprise Customer Management System
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1">
+                    <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                        <li>
+                            <a asp-area="" asp-controller="Customer" asp-action="Index" 
+                               class="nav-link block py-2 pr-4 pl-3 rounded lg:p-0 @(ViewContext.RouteData.Values["Action"]?.ToString() == "Index" ? "text-blue-400" : "")">
+                                <svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                                </svg>
+                                Customers
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Customer" asp-action="Create" 
+                               class="nav-link block py-2 pr-4 pl-3 rounded lg:p-0 @(ViewContext.RouteData.Values["Action"]?.ToString() == "Create" ? "text-blue-400" : "")">
+                                <svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                </svg>
+                                Add Customer
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer class="bg-gray-900 border-t border-gray-800 mt-auto">
+        <div class="mx-auto max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <a asp-area="" asp-controller="Customer" asp-action="Index" class="flex items-center">
+                        <svg class="w-6 h-6 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                        <span class="text-xl font-semibold text-white">Arksoft</span>
+                    </a>
+                    <p class="text-gray-400 text-sm mt-2 max-w-sm">
+                        Professional customer management system built with Clean Architecture principles and modern web technologies.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-white uppercase">Features</h2>
+                        <ul class="text-gray-400 text-sm space-y-2">
+                            <li>Customer Management</li>
+                            <li>Advanced Search & Filter</li>
+                            <li>Data Validation</li>
+                            <li>Responsive Design</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-white uppercase">Technology</h2>
+                        <ul class="text-gray-400 text-sm space-y-2">
+                            <li>ASP.NET Core MVC</li>
+                            <li>Entity Framework Core</li>
+                            <li>Clean Architecture</li>
+                            <li>Tailwind CSS</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-white uppercase">Quality</h2>
+                        <ul class="text-gray-400 text-sm space-y-2">
+                            <li>Repository Pattern</li>
+                            <li>Dependency Injection</li>
+                            <li>FluentValidation</li>
+                            <li>Enterprise Standards</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-700 sm:mx-auto lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-gray-400 sm:text-center">
+                    © @DateTime.Now.Year <a asp-area="" asp-controller="Customer" asp-action="Index" class="hover:underline text-blue-400">Arksoft Customer Management</a>. 
+                    Built with Clean Architecture & Modern Web Standards.
+                </span>
+                <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+                    <span class="text-gray-400 text-sm">
+                        <svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Production Ready
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
