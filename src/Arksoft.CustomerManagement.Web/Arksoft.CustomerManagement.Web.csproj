@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <InternalsVisibleTo Include="Arksoft.CustomerManagement.UnitTests" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Arksoft.CustomerManagement.Domain\Arksoft.CustomerManagement.Domain.csproj" />
     <ProjectReference Include="..\Arksoft.CustomerManagement.Application\Arksoft.CustomerManagement.Application.csproj" />
     <ProjectReference Include="..\Arksoft.CustomerManagement.Infrastructure\Arksoft.CustomerManagement.Infrastructure.csproj" />

@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="8.8.0" />
-    <PackageReference Include="FluentValidation" Version="11.10.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="9.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.10" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
@@ -30,7 +29,6 @@
     <ProjectReference Include="..\..\src\Arksoft.CustomerManagement.Domain\Arksoft.CustomerManagement.Domain.csproj" />
     <ProjectReference Include="..\..\src\Arksoft.CustomerManagement.Application\Arksoft.CustomerManagement.Application.csproj" />
     <ProjectReference Include="..\..\src\Arksoft.CustomerManagement.Infrastructure\Arksoft.CustomerManagement.Infrastructure.csproj" />
-    <ProjectReference Include="..\..\src\Arksoft.CustomerManagement.Web\Arksoft.CustomerManagement.Web.csproj" />
   </ItemGroup>
 
 </Project>
