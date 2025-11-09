@@ -215,4 +215,10 @@ public class CustomerController : Controller
 
         return RedirectToAction(nameof(Index));
     }
+
+    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    public IActionResult Error()
+    {
+        return View("Error");
+    }
 }

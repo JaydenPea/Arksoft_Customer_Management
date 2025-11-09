@@ -107,21 +107,17 @@
                     © @DateTime.Now.Year <a asp-area="" asp-controller="Customer" asp-action="Index" class="hover:underline text-blue-400">Arksoft Customer Management</a>. 
                     Built with Clean Architecture & Modern Web Standards.
                 </span>
-                <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-                    <span class="text-gray-400 text-sm">
-                        <svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                        Production Ready
-                    </span>
-                </div>
             </div>
         </div>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/toast-utils.js" asp-append-version="true"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    
+    <!-- Render Modal Section -->
+    @await RenderSectionAsync("Modal", required: false)
 </body>
 </html>

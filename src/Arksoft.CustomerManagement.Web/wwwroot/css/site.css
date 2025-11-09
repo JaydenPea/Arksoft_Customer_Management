@@ -39,6 +39,10 @@
     @apply border border-gray-600 text-gray-400 hover:bg-gray-600 hover:text-white focus:ring-gray-500 focus:ring-offset-gray-200 transition ease-in duration-200 text-center text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black rounded-lg px-4 py-2;
   }
   
+  .btn-outline-danger {
+    @apply border border-red-600 text-red-400 hover:bg-red-600 hover:text-white focus:ring-red-500 focus:ring-offset-red-200 transition ease-in duration-200 text-center text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black rounded-lg px-4 py-2;
+  }
+  
   .btn-sm {
     @apply px-2 py-1 text-xs;
   }
