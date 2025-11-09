@@ -1,0 +1,15 @@
+{
+  "name": "arksoft-customer-management",
+  "version": "1.0.0",
+  "description": "Customer Management System with Tailwind CSS and Flowbite",
+  "scripts": {
+    "build-css": "tailwindcss -i ./wwwroot/css/site.css -o ./wwwroot/css/output.css --watch",
+    "build-css-prod": "tailwindcss -i ./wwwroot/css/site.css -o ./wwwroot/css/output.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "flowbite": "^2.2.1"
+  }
+}
